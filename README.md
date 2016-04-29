@@ -1,3 +1,3 @@
 # Game
 Computer Networks Homework1
-run server.java first and then run client.java
+run StartGame.java twice.First to Create a game and Second to Join Game.

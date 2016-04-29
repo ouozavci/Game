@@ -20,7 +20,11 @@ public class Server {
 			 
 		try {
 			serverSocket = new ServerSocket(2222);	
-			System.out.println("Server is running...");		
+			JButton b1 = new JButton("1");
+			JButton b2 = new JButton("2");
+			JButton b3 = new JButton("3");
+			final GameGui gui = new GameGui(b1, b2, b3);
+			gui.setMessage("Server is running...");		
 			clientSocket = serverSocket.accept();
 			System.out.println("Got connection from "+clientSocket.getInetAddress()+ " port number : " + clientSocket.getPort());
 			out = new PrintWriter(clientSocket.getOutputStream(),true);
@@ -28,10 +32,8 @@ public class Server {
 			
 				final Game game = new Game();
 			System.out.println("Game has started!");	
-			JButton b1 = new JButton("1");
-			JButton b2 = new JButton("2");
-			JButton b3 = new JButton("3");
-			final GameGui gui = new GameGui(b1, b2, b3);
+			
+			
 			gui.setTitle("PLAYER 1");
 				b1.addMouseListener(new MouseListener() {
 					
@@ -190,10 +192,6 @@ public class Server {
 		}
 	}
 
-	public static void main(String[] args) throws IOException{
-		Server server = new Server();
-		
-	}
 }
 class Game{
 	int StoneCount;

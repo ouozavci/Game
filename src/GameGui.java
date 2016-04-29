@@ -2,10 +2,8 @@
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
-import java.awt.Label;
-
 import javax.swing.*;
-import javax.swing.border.Border;
+
 
 public class GameGui extends JFrame{
 	JLabel lblMessage = null;
@@ -24,7 +22,6 @@ public class GameGui extends JFrame{
 			
 			lblMessage = new JLabel();
 			
-			//add(lblHeader,BorderLayout.NORTH);
 			pnlButtons.add(b1);
 			pnlButtons.add(b2);
 			pnlButtons.add(b3);
